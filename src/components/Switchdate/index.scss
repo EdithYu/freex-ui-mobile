@@ -1,0 +1,23 @@
+.calendar-contanier {
+    .calendar-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 20px;
+        .arrow-align {
+            display: flex;
+            align-items: center;
+            &.disabled {
+                opacity: 0.2;
+            }
+        }
+    }
+    .am-calendar {
+        .content { 
+            top: 60px;
+            height: calc(100% - 60px);
+        }
+        
+    }
+}

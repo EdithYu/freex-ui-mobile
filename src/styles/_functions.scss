@@ -1,0 +1,11 @@
+@function r($px) {
+    @return $px * 1px;
+}
+
+// 是否包含字符串
+@function str-contains($string, $substring) {
+    @if str-index($string, $substring) {
+      @return true;
+    }
+    @return false;
+}

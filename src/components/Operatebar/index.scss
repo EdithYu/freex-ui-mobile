@@ -1,0 +1,17 @@
+.x-operate-bar {
+  position: fixed;
+  bottom: 0rem;
+  width: 100%;
+  padding: 0.12rem 0.12rem;
+  right: 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.44) 46%,
+    $white 100%
+  );
+  height: 0.7rem;
+  &-wrap {
+    display: flex;
+  }
+}

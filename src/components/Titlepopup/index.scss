@@ -1,0 +1,25 @@
+.x-title-popup {
+  background-color: white;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  padding: 0.2rem;
+  &-top {
+    margin-bottom: 0.2rem;
+    text-align: center;
+    position: relative;
+    &-title {
+      font-size: 0.18rem;
+      font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+      font-weight: 500;
+      color: #333333;
+    }
+    .x-icon-cross {
+      position: absolute;
+      right: 0rem;
+      fill: #A6B5C5;
+      width: 0.24rem;
+      height: 0.24rem;
+      top: 0rem;
+    }
+  }
+}

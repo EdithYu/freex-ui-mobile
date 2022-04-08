@@ -1,0 +1,35 @@
+.x-button {
+  text-align: center;
+  padding: 0.1rem 0rem;
+  border-radius: 2 * 0.1rem;
+  width: 100%;
+  &-primary {
+    background: $blue;
+    color: $nomal-bg;
+    &:active {
+      background: $blue-active;
+    }
+    &-unactivate {
+      background: $blue-unactive;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    &-disable {
+      background: $gray-disable;
+      pointer-events: none;
+    }
+  }
+  &-ghost {
+    color: $blue;
+    border: 1px solid $blue;
+    background: $white;
+    &:active {
+      background: $blue-ghost-active;
+    }
+    &-disable {
+      color: $gray-disable;
+      border: 1px solid $gray-disable;
+      pointer-events: none;
+    }
+  }
+}

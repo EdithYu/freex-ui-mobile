@@ -1,0 +1,85 @@
+.x-drop-menu {
+  position: fixed;
+  z-index: $drop-menu-zindex;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $drop-menu-height;
+  box-sizing: border-box;
+  color: #666f83;
+  font-size: $drop-menu-font-size;
+  font-weight: $drop-menu-font-weight;
+  &-bar {
+    position: relative;
+    z-index: $drop-menu-zindex;
+    display: flex;
+    height: 100%;
+    background: $drop-menu-bar-bg;
+    @include hairline(bottom, $drop-menu-bar-border-color);
+    .bar-item {
+      display: flex;
+      flex: 1;
+      margin: 2% 0;
+      align-items: center;
+      justify-content: center;
+      span {
+        position: relative;
+        padding-right: 0.15rem;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 0;
+          height: 0;
+          margin-top: -0.02rem;
+          border-left: solid 0.05rem transparent;
+          border-right: solid 0.05rem transparent;
+          border-top: solid 0.06rem #c5cad5;
+          transition: transform .3s;
+        }
+      }
+      &.active {
+        color: $drop-menu-color;
+        span::after {
+          transform: rotate(180deg);
+          border-top-color: $drop-menu-color;
+        }
+      }
+      &.selected {
+        color: $drop-menu-color;
+      }
+      &.disabled {
+        opacity: $drop-menu-disabled-opacity;
+      }
+    }
+  }
+  .x-drop-menu-list {
+    width: 100%;
+    padding-top: 0.55rem;
+    background: #fff;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+    .item-row{
+      position: relative;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      min-height: 0.5rem;
+      padding-top: 0.16rem;
+      padding-bottom: 0.16rem;
+      box-sizing: border-box;
+      text-align: center;
+      @include hairline(bottom, $drop-menu-bar-border-color);
+      &.selected {
+        color: $drop-menu-color;
+      }
+      &.disabled {
+        opacity: $drop-menu-disabled-opacity;
+        pointer-events: none;
+      }
+    }
+  }
+}

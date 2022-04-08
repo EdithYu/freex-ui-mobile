@@ -1,0 +1,75 @@
+$tagPrefixCls: x-tag;
+
+.#{$tagPrefixCls} {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: auto;
+        font-size: 9px;
+        height: 15px;
+        padding: 0 4px;
+        white-space: nowrap;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+    &-ghost {
+        .#{$tagPrefixCls}-content {
+            border-width: 1px;
+            border-style: solid;
+        }
+    }
+    &-bubble {
+        .#{$tagPrefixCls}-content {
+            border-radius: 50%;
+            border-bottom-left-radius: 0;
+        }
+    }
+    &-coupon {
+        padding: 0 8px;
+        .#{$tagPrefixCls}-content {
+            padding: 0;
+        }
+    }
+    &-round {
+        .#{$tagPrefixCls}-content {
+            background: $red;
+            color: $white;
+            min-width: 14px;
+            border-radius: 1000px;
+        }
+    }
+    &-sup {
+        .#{$tagPrefixCls}-content {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transform: translateX(calc(14px / -2)) translateY(-4px);
+        }
+    }
+    &-dot {
+        .#{$tagPrefixCls}-content { 
+            width: 8px;
+            height: 8px;
+            background: $red;
+            border-radius: 50%;
+        }
+    }
+    .left-coupon,
+    .right-coupon {
+        position: absolute;
+        top: 0;
+        width: 8px;
+        height: 100%;
+    }
+    .left-coupon {
+        left: 0;
+    }
+    .right-coupon {
+        right: 0;
+    }
+}

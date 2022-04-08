@@ -1,0 +1,164 @@
+.plate-keyboard {
+  box-sizing: border-box;
+  .mask {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+    z-index: 1;
+    height: auto;
+  }
+  .plate-keyboard-content {
+    position: relative;
+    z-index: 10000;
+    .card-bottom {
+      display: flex;
+      justify-content: space-between;
+      .input-box {
+        display: inline-block;
+        width: 0.35rem;
+        height: 45px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid #757b7f5e;
+        font-size: 18px;
+        font-weight: 400;
+        color: #32363A;
+        position: relative;
+        overflow: hidden;
+        .text-top {
+          white-space: nowrap;
+          font-size: 20px;
+        }
+        .text-bot {
+          white-space: nowrap;
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          background: #6dd40042;
+          border-radius: 0px 0px 5px 5px;
+          font-size: 9px;
+          font-weight: 500;
+          color: #6DD400;
+          height: 10px;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      .center {
+        line-height: 45px;
+      }
+    }
+    .province{
+      width: 100%;
+      padding:0.2rem 0.15rem 0.2rem 0.15rem;
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      background: #f2f2f2;
+      z-index: 100;
+    }
+    .keyboard{
+      width: 100%;
+      padding:0.1rem 0;
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      background: #f2f2f2;
+    }
+    .p-box{
+      display: flex;
+      flex-wrap:wrap;
+    }
+    .province p{
+      width: calc(100% / 8);
+      text-align: center;
+      font-size:15px;
+      color:#333;
+      margin: 0.03rem;
+    }
+    .province p span{
+      background: #fff;
+      border-radius: 7px;
+      box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+      display: inline-block;
+      width: 0.44rem;
+      height: 0.44rem;
+      line-height: 0.44rem;
+      font-size: 18px;
+      font-weight: 400;
+      color: #32363A;
+      box-sizing: border-box;
+    }
+    .province p .other {
+      width: 0.92rem;
+      background-position: center;
+      background-size: 0.29rem 0.17rem;
+      background-repeat: no-repeat;
+      color: #2196f3;
+
+    }
+    /* 数字键盘 */
+    .keyboard{
+      padding:0;
+      z-index: 100;
+    }
+    .keyboard ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.16rem 0rem;
+    }
+    .keyboard ul li{
+      text-align: center;
+      width: fit-content;
+      margin: 0.03rem;
+      span {
+        background: #fff;
+        width:0.36rem;
+        height:0.44rem;
+        line-height:0.44rem;
+        border-radius: 7px;
+        display: inline-block;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+        font-size: 18px;
+      }
+      .other {
+        background: #fff;
+        width:1.20rem;
+        height:0.44rem;
+        line-height:0.44rem;
+        border-radius: 7px;
+        display: inline-block;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);  
+        background-position: center;
+        background-size: 0.29rem 0.17rem;
+        background-repeat: no-repeat;
+        color: #2196f3;
+      }
+    }
+    .keyboard ul .number{
+      width: fit-content;
+      margin: 0.03rem;
+      .text {
+        background: #fff;
+        width:0.65rem;
+        height:0.44rem;
+        line-height:0.44rem;
+        border-radius: 7px;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        color: #32363A;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+      }
+    }
+  }
+}
